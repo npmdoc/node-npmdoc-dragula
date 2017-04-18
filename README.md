@@ -1,9 +1,14 @@
-# api documentation for  [dragula (v3.7.2)](https://github.com/bevacqua/dragula)  [![npm package](https://img.shields.io/npm/v/npmdoc-dragula.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dragula) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dragula.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dragula)
+# npmdoc-dragula
+
+#### api documentation for  [dragula (v3.7.2)](https://github.com/bevacqua/dragula)  [![npm package](https://img.shields.io/npm/v/npmdoc-dragula.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dragula) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dragula.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dragula)
+
 #### Drag and drop so simple it hurts
 
-[![NPM](https://nodei.co/npm/dragula.png?downloads=true)](https://www.npmjs.com/package/dragula)
+[![NPM](https://nodei.co/npm/dragula.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/dragula)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-dragula/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-dragula_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dragula/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-dragula/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-dragula/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-dragula/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dragula/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-dragula/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Nicolas Bevacqua",
-        "email": "nicolasbevacqua@gmail.com",
         "url": "http://bevacqua.io/"
     },
     "bugs": {
@@ -57,13 +61,11 @@
     "main": "dragula.js",
     "maintainers": [
         {
-            "name": "bevacqua",
-            "email": "nicolasbevacqua@gmail.com"
+            "name": "bevacqua"
         }
     ],
     "name": "dragula",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/bevacqua/dragula.git"
@@ -85,86 +87,6 @@
     },
     "version": "3.7.2"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module dragula](#apidoc.module.dragula)
-1.  object <span class="apidocSignatureSpan">dragula.</span>classes
-
-#### [module dragula.classes](#apidoc.module.dragula.classes)
-1.  [function <span class="apidocSignatureSpan">dragula.classes.</span>add (el, className)](#apidoc.element.dragula.classes.add)
-1.  [function <span class="apidocSignatureSpan">dragula.classes.</span>rm (el, className)](#apidoc.element.dragula.classes.rm)
-
-
-
-# <a name="apidoc.module.dragula"></a>[module dragula](#apidoc.module.dragula)
-
-
-
-# <a name="apidoc.module.dragula.classes"></a>[module dragula.classes](#apidoc.module.dragula.classes)
-
-#### <a name="apidoc.element.dragula.classes.add"></a>[function <span class="apidocSignatureSpan">dragula.classes.</span>add (el, className)](#apidoc.element.dragula.classes.add)
-- description and source-code
-```javascript
-function addClass(el, className) {
-  var current = el.className;
-  if (!current.length) {
-    el.className = className;
-  } else if (!lookupClass(className).test(current)) {
-    el.className += ' ' + className;
-  }
-}
-```
-- example usage
-```shell
-...
-  end();
-  start(grabbed);
-
-  var offset = getOffset(_item);
-  _offsetX = getCoord('pageX', e) - offset.left;
-  _offsetY = getCoord('pageY', e) - offset.top;
-
-  classes.add(_copy || _item, 'gu-transit');
-  renderMirrorImage();
-  drag(e);
-}
-
-function canStart (item) {
-  if (drake.dragging && _mirror) {
-    return;
-...
-```
-
-#### <a name="apidoc.element.dragula.classes.rm"></a>[function <span class="apidocSignatureSpan">dragula.classes.</span>rm (el, className)](#apidoc.element.dragula.classes.rm)
-- description and source-code
-```javascript
-function rmClass(el, className) {
-  el.className = el.className.replace(lookupClass(className), ' ').trim();
-}
-```
-- example usage
-```shell
-...
-}
-
-function cleanup () {
-  var item = _copy || _item;
-  ungrab();
-  removeMirrorImage();
-  if (item) {
-    classes.rm(item, 'gu-transit');
-  }
-  if (_renderTimer) {
-    clearTimeout(_renderTimer);
-  }
-  drake.dragging = false;
-  if (_lastDropTarget) {
-    drake.emit('out', item, _lastDropTarget, _source);
-...
 ```
 
 
