@@ -1,6 +1,6 @@
 # npmdoc-dragula
 
-#### api documentation for  [dragula (v3.7.2)](https://github.com/bevacqua/dragula)  [![npm package](https://img.shields.io/npm/v/npmdoc-dragula.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dragula) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dragula.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dragula)
+#### basic api documentation for  [dragula (v3.7.2)](https://github.com/bevacqua/dragula)  [![npm package](https://img.shields.io/npm/v/npmdoc-dragula.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dragula) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dragula.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dragula)
 
 #### Drag and drop so simple it hurts
 
@@ -85,7 +85,8 @@
         "test": "npm run lint && browserify test/*.js | tape-run",
         "test-watch": "hihat test/*.js -p tap-dev-tool"
     },
-    "version": "3.7.2"
+    "version": "3.7.2",
+    "bin": {}
 }
 ```
 
